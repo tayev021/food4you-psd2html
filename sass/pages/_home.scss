@@ -1,0 +1,41 @@
+.food-menu {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  padding: 9rem 7rem;
+
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  justify-items: center;
+
+  &__dishes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: space-between;
+  }
+
+  &__dish {
+    display: grid;
+    grid-template-columns: minmax(max-content, 1fr);
+    justify-items: center;
+  }
+
+  &__img {
+    height: 35rem;
+    width: 35rem;
+    margin-bottom: 4.5rem;
+  }
+
+  &__dish-info {
+    max-width: 35.5rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+}
+
+.food-menu-bg {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  background-image: linear-gradient(to bottom, $color-white 40%, $color-secondary 40% 55%, $color-white 55%);
+  z-index: -1;
+}
