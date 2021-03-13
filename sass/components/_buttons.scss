@@ -1,0 +1,21 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  &--navigation {
+    font-weight: 700;
+  }
+
+  &--secondary {
+    font-size: 1.5rem;
+    font-weight: 800;
+    border: 1px solid $color-black;
+    padding: 2rem 4rem;
+  }
+}
