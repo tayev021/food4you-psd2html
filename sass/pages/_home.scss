@@ -39,3 +39,51 @@
   background-image: linear-gradient(to bottom, $color-white 40%, $color-secondary 40% 55%, $color-white 55%);
   z-index: -1;
 }
+
+.try-it {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(max-content, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 3rem 4rem;
+
+  padding: 9rem 11rem;
+
+  font-weight: 700;
+  color: $color-white;
+  text-transform: uppercase;
+
+  &__box {
+    padding: 3rem;
+    background-size: cover;
+
+    &--1 {
+      grid-row: 1 / 3;
+      padding: 4.5rem;
+      background-image: url(/img/try-1.jpg);
+    }
+
+    &--2 {
+      background-image: url(/img/try-2.jpg);
+    }
+
+    &--3 {
+      background-image: url(/img/try-3.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    max-width: 22rem;
+    font-size: 2.5rem;
+    line-height: 1.4;
+
+    &--large {
+      font-size: 3rem;
+      margin-bottom: 17rem;
+    }
+  }
+}
