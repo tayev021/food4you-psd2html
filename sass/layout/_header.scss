@@ -4,6 +4,10 @@
   padding: 4rem 5rem;
   position: relative;
 
+  @media (max-width: 600px) {
+    padding: 2rem;
+  }
+
   &__logo-box {
     display: grid;
     grid-template-columns: 1fr max-content;
@@ -45,6 +49,14 @@
     justify-content: start;
     justify-items: center;
     margin: 5rem 0 12rem 4rem;
+
+    @media (max-width: 1200px) {
+      margin-left: 0;
+    }
+
+    @media (max-width: 900px) {
+      justify-content: center;
+    }
   }
 
   &__text-info {
@@ -72,19 +84,37 @@
   &__img {
     position: absolute;
 
+    @media (max-width: 900px) {
+      display: none;
+    }
+
     &--main {
       top: 21rem;
-      right: 15rem;
+      left: 48%;
+
+      @media (max-width: 1200px) {
+        transform: scale(.75);
+        top: 19rem;
+        left: 44%;
+      }
     }
 
     &--1 {
       top: 18.5rem;
       left: 8rem;
+
+      @media (max-width: 1200px) {
+        left: 3rem;
+      }
     }
 
     &--2 {
       top: 18rem;
-      left: 68rem;
+      left: 45%;
+
+      @media (max-width: 1200px) {
+        left: 50%;
+      }
     }
 
     &--3 {
@@ -94,13 +124,23 @@
     }
 
     &--4 {
-      bottom: 4.5rem;
-      left: 65rem;
+      bottom: 8rem;
+      left: 38%;
+
+      @media (max-width: 1200px) {
+        left: 45%;
+      }
     }
 
     &--5 {
-      right: 8rem;
-      bottom: 6rem;
+      left: 92%;
+      bottom: 4rem;
+
+      @media (max-width: 1200px) {
+        transform: rotate(90deg);
+        left: 80%;
+        bottom: 2rem;
+      }
     }
   }
 }
@@ -128,4 +168,9 @@
   grid-row: 1 / 2;
   background-image: linear-gradient( 105deg, $color-primary 67%, $color-secondary 67%);
   z-index: -1;
+
+  @media (max-width: 900px) {
+    background-image: none;
+    background-color: $color-primary;
+  }
 }

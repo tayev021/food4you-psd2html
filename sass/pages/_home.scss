@@ -7,17 +7,40 @@
   grid-template-rows: repeat(3, max-content);
   justify-items: center;
 
+  @media (max-width: 1200px) {
+    padding: 7rem 2rem;
+  }
+
   &__dishes {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, max-content);
     justify-content: space-between;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+      align-content: center;
+    }
   }
 
   &__dish {
     display: grid;
     grid-template-columns: minmax(max-content, 1fr);
     justify-items: center;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 3rem;
+      border-bottom: 5px solid $color-secondary;
+      padding-bottom: 3rem;
+    }
+
+    &:last-child {
+      @media (max-width: 1200px) {
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
   }
 
   &__img {
@@ -27,7 +50,7 @@
   }
 
   &__dish-info {
-    max-width: 35.5rem;
+    max-width: 35rem;
     text-align: center;
     margin-bottom: 3.5rem;
   }
@@ -36,8 +59,12 @@
 .food-menu-bg {
   grid-column: 1 / 4;
   grid-row: 2 / 3;
-  background-image: linear-gradient(to bottom, $color-white 40%, $color-secondary 40% 55%, $color-white 55%);
+  background-image: linear-gradient(to bottom, $color-white 37%, $color-secondary 37% 55%, $color-white 55%);
   z-index: -1;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .events {
@@ -124,6 +151,14 @@
   color: $color-white;
   text-transform: uppercase;
 
+  @media (max-width: 1200px) {
+    padding: 9rem 2rem;
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
   &__box {
     padding: 3rem;
     background-size: cover;
@@ -172,6 +207,10 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(min-content, 38rem));
     grid-gap: 2.5rem;
+
+    @media (max-width: 900px) {
+      grid-template-columns: minmax(min-content, 45rem);
+    }
   }
 
   &__input {
